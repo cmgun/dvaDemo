@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="<%= htmlWebpackPlugin.options.data.clientName %>"/>
+    <meta charset="UTF-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <link rel="stylesheet" type="text/css" href="css/antd.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!-- 前后端分离时，api作为代理标识，被代理后会移除 -->
+    <script type="text/javascript">
+        var ctx = 'api/';
+    </script>
+</head>
+<body>
+<div id="root" ></div>
+<script type="text/javascript" src="js/react.min.js"></script>
+<script type="text/javascript" src="js/react-dom.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/monent-zh-cn.js"></script>
+<script type="text/javascript" src="js/antd.min.js"></script>
+<script type="text/javascript" src="js/dva.min.js"></script>
+<script type="text/javascript" src="js/router.min.js"></script>
+<script type="text/javascript" src="js/polyfill.min.js"></script>
+<script type="text/javascript" src="index.js?<%= htmlWebpackPlugin.options.hash %>"></script>
+</body>
+</html>
